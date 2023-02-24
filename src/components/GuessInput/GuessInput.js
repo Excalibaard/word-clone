@@ -12,6 +12,7 @@ function GuessInput() {
   const handleSubmit = event => {
     event.preventDefault();
     console.log(guess);
+    setGuess('')
   }
 
   return (
