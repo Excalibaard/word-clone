@@ -16,7 +16,7 @@ function GuessInput({ addGuess }) {
     setGuess('');
   }
 
-  const pattern = `\\w{${NUM_OF_CHARS_ALLOWED},${NUM_OF_CHARS_ALLOWED}}`
+  const pattern = `[a-zA-Z]{${NUM_OF_CHARS_ALLOWED},${NUM_OF_CHARS_ALLOWED}}`
 
   return (
     <form className="guess-input-wrapper" onSubmit={handleSubmit}>
