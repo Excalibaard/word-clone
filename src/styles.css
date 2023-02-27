@@ -209,6 +209,14 @@ h1 {
   color: white;
 }
 
+.banner__playAgain {
+  display: inline-block;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin-top: 16px;
+}
+
 .visually-hidden {
   position: absolute;
   overflow: hidden;
