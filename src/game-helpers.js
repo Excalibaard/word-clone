@@ -1,3 +1,5 @@
+import { NUM_OF_GUESSES_ALLOWED } from "./constants";
+
 export function checkGuess(guess, answer) {
   if (!guess) {
     return null;
@@ -23,6 +25,18 @@ export function checkGuess(guess, answer) {
     };
   });
 }
+
+/* Game Status */
+
+export function checkWin(lastGuess) {
+  return lastGuess.every((char) => char.status === "correct");
+}
+
+export function checkLoss(guesses) {
+  return guesses.length >= NUM_OF_GUESSES_ALLOWED;
+}
+
+/* Character guesses */
 
 const CHAR_STATUS_PRIORITY = ["correct", "misplaced", "incorrect"];
 
