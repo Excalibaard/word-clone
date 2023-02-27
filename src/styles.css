@@ -1,6 +1,10 @@
 /*
   Theme and global variables
 */
+* {
+  box-sizing: border-box;
+}
+
 html {
   overflow-y: scroll;
 
@@ -124,20 +128,40 @@ h1 {
   --radius: 0px 0px 0px 4px;
 }
 
-.cell.correct {
+.cell.correct,
+.keyboard__cell.correct {
   background: var(--color-success);
   border-color: var(--color-success);
   color: white;
 }
-.cell.incorrect {
+.cell.incorrect,
+.keyboard__cell.incorrect {
   background: var(--color-gray-300);
   border-color: var(--color-gray-300);
   color: white;
 }
-.cell.misplaced {
+.cell.misplaced,
+.keyboard__cell.misplaced {
   background: var(--color-warning);
   border-color: var(--color-warning);
   color: white;
+}
+
+.keyboard {
+  display: grid;
+  position: relative;
+  place-content: center;
+  grid-auto-rows: 32px;
+  grid-auto-columns: 32px;
+  gap: 8px;
+  text-align: center;
+}
+
+.keyboard__cell {
+  display: grid;
+  place-content: center;
+  border: 2px solid var(--color-gray-700);
+  border-radius: var(--radius);
 }
 
 .guess-input-wrapper {
